@@ -1,0 +1,115 @@
+
+
+
+
+
+# The start symbol is START.
+
+# These two rules are required; please do not change these weights!
+99	START	S1
+1	START	S2
+
+# This is a very, very, very simple grammar to get you started.
+
+# Sentences
+1	S1	NP VP .
+1	S1	VP NP VP .
+1	S1	W NP ?
+1	S1	NP NP .
+
+#  Verb phrases
+1	VP	Vbar NP
+1	VP	Vbar VP NP 
+1	VP	Vbar 
+1	VP	Vbar PP 
+1	VP	Vbar VP
+1	VP	Vbar W VP
+1	VP	Vbar W
+1	VP	Vbar W AJ
+1	VP	Vbar PP NP
+
+
+
+#Verb	Ttransitive verbs
+#VerbPa	Verbs with past tense
+#MVerb	Modal Verbs
+#Verb	normal Verbs
+#VerbPP	Verbs indicating past participle
+#Verbng	verbs indicating present participle
+#AVerb	Adverbs
+#SVerb	Verbs with plural degree
+#VerbP	present tense verbs
+
+#Verb Phrase, inner level
+1	Vbar	VerbT
+1	Vbar	VerbPa
+1	Vbar	MVerb
+1	Vbar	Verb
+1	Vbar	VerbPP
+1	Vbar	Verbng
+1	Vbar	AVerb
+1	Vbar	SVerb
+1	Vbar	VerbP
+
+# Noun phrases
+20	NP	Det Nbar
+1	NP	Det NP
+1	NP	Nbar
+1	NP	AJ Nbar
+1	NP	W Det AJ 
+1	NP	W NP 
+1	NP	W AJ
+1	NP	Nbar W NP
+1	NP	Nbar PP Nbar
+1	NP	Nbar VP
+1	NP	Nbar W VP
+1	NP	Nbar NP
+1	NP	, Det AJ
+
+#Noun	noun
+#Proper 	proper nouns
+#PropNP 	proper nouns indicating non people
+#NounP	Plura Nouns
+#Props	plural proper nouns
+#PPro	Personal pronouns
+#Pppn	possessive personal nouns
+
+
+
+
+# Noun phrase, inner level
+20	Nbar	Noun
+1	Nbar	Nbar PP
+1	Nbar	Proper
+1	Nbar	PropNP
+1	Nbar	NounP
+1	Nbar	Props
+1	Nbar	PPro
+1	Nbar	Pppn
+
+# Prepositional phrase
+1	PP	Prep
+1	PP	Prep NP
+1	PP	Prep NP PP
+
+#Adjective Phrase
+1	AJ	Adj
+1	AJ	AdjS NP
+1	AJ	Adj NP
+
+#TO	to
+#Num	five, sixty
+#Conj	and
+#Not	not
+#Dos	do, does
+#Whad W	why
+
+
+
+#Other phrases to, numbers, conjunction, not, do, does, why
+1	W	TO
+1	W	Num
+1	W	Conj
+1	W	Not
+1	W	Dos
+1	W	Whad W
